@@ -24,8 +24,8 @@ export default function Home(props) {
   }, []);
 
   return (
-    <>
+    <div className={"bg-amber-700"}>
       Welcome
-    </>
+    </div>
   );
 }
