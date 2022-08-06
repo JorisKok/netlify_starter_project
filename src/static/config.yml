@@ -1,0 +1,38 @@
+parameters:
+  default: &default
+    create: true
+    i18n: true
+    summary: "#{{sort}} - {{title}}"
+    sortable_fields: ["sort"]
+  labels:
+    - &title { label: "Title", name: "title", widget: "string", i18n: true }
+    - &sort { label: "Sort", name: "sort", widget: "number", value_type: 'int', min: 0, max: 999, default: 999, i18n: false, hint: "Articles will be sorted from low to high number" }
+    - &from { label: "From", name: "from", widget: "datetime", i18n: false, date_format: false, time_format: 'HH:mm' }
+    - &until { label: "Until", name: "until", widget: "datetime", i18n: false, date_format: false, time_format: 'HH:mm' }
+    - &day { label: "Day", name: "day", widget: "select", i18n: false, options: ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]}
+    - &price { label: "Price", name: "price", widget: "string", i18n: false }
+    - &image{ label: "Image", name: "image", widget: "image", required: false, i18n: "duplicate" }
+    - &body{ label: "Body", name: "body", widget: "text", i18n: true }
+    - &file { label: "File", name: "file", widget: "file", i18n: true }
+  article: &article
+    - *sort
+    - *title
+    - *image
+    - *body
+
+i18n:
+  structure: multiple_folders
+  locales: [ nl, en ]
+  default_locale: nl
+backend:
+  name: git-gateway
+  branch: master
+media_folder: src/assets
+public_folder: /assets
+collections:
+  - <<: *default
+    name: "home"
+    label: "Articles - Home"
+    label_singular: "Home article" # Used in the UI, ie: "New Post"
+    folder: "content/home"
+    fields: *article
