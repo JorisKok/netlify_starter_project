@@ -1,4 +1,6 @@
-# Netlify Start Project
+# Netlify Starter Project
+
+- Includes tailwind, daisyui
 
 ## CLI Commands
 
