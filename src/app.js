@@ -1,17 +1,10 @@
-import { h, Component } from "preact";
-import { route, Router } from "preact-router";
-import { Provider, usePrerenderData } from "@preact/prerender-data-provider";
+import {Component} from "preact";
+import {Router} from "preact-router";
+import {Provider} from "@preact/prerender-data-provider";
 
 // Code-splitting is automated for routes
 import Home from "./views/Home/Home.js";
 import NotFoundPage from "./views/NotFound/NotFound.js";
-import AboutUs from "./views/AboutUs/AboutUs";
-import HelpUsGrow from "./views/HelpUsGrow/HelpUsGrow";
-import LetsHaveFun from "./views/LetsHaveFun/LetsHaveFun";
-import LetsPlay from "./views/LetsPlay/LetsPlay";
-import News from "./views/News/News";
-import Schools from "./views/Schools/Schools";
-import useData from "./hooks/useData";
 
 export default class App extends Component {
   // state.getData(props);
