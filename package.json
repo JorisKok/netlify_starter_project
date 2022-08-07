@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "@babel/preset-react": "^7.18.6",
+    "@preact/compat": "^17.1.1",
     "@preact/prerender-data-provider": "^3.0.1",
     "daisyui": "^2.19.0",
     "imagemin-mozjpeg": "^8.0.0",
