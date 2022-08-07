@@ -48,6 +48,7 @@
     "preact-cli-plugin-netlify": "^1.6.0",
     "preact-render-to-string": "^5.1.10",
     "preact-router": "^3.0.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
     "react-slideshow-image": "^4.0.3",
     "sass-loader": "^10.3.1",
     "tailwindcss": "^3.1.6",
